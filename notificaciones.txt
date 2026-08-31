@@ -1,0 +1,4 @@
+Habiendo visto sistemas distribuidos, considero que la mejor opción es un sistema de colas, donde el proceso notificador
+tiene una cola para crear cada una de las notificaciones, separado de los demás sistemas de la aplicación en otro servidor/hilo/docker
+el sistema notificador debería esperar que la ultima notifacion de el visto bueno para enviar la siguiente, de este modo, será un poco
+más demorado enviar todas las notificaciones pero nos aseguramos que todas son enviadas correctamente y que ningun otro proceso se bloquea mientras se envían.
