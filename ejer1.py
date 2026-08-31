@@ -13,7 +13,7 @@ def Solitary(arr:list) -> int:
         if value:
             return key
 
-# Logica de datos 2:
+# Lógica de datos 2:
 # Limpieza de ceros
 
 def ZeroCleaner(arr:list) -> list:
@@ -27,7 +27,7 @@ def ZeroCleaner(arr:list) -> list:
     count.extend([0] * z_count)
     return count
 
-# Logica de datos 3:
+# Lógica de datos 3:
 # Compresor de texto
 
 def TextCompressor(text:str) -> str:
@@ -41,7 +41,13 @@ def TextCompressor(text:str) -> str:
     compressed = ''
     for key, value in count.items():
         compressed += f'{key}{value}'
+
+    if len(compressed) >= len(text):
+        return text
     return compressed
+
+# Lógica de datos 4:
+# El número faltante
 
 print(f'Ejercicio 1 Ejemplo 1 output : {Solitary([4, 1, 2, 1, 2])}')
 print(f'Ejercicio 1 Ejemplo 2 output : {Solitary([2,2,1,1,3,3,4,4,5,5,10,10,12,12])}')
