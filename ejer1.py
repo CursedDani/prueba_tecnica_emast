@@ -13,5 +13,20 @@ def Solitary(arr:list) -> int:
         if value:
             return key
 
+#Logica de datos 2:
+# Limpieza de ceros
 
-print(Solitary([4, 4, 1, 2, 1, 2]))
+def ZeroCleaner(arr:list) -> list:
+    count = []
+    z_count = 0
+    for i in arr:
+        if i != 0:
+            count.append(i)
+        else:
+            z_count += 1
+    count.extend([0] * z_count)
+    return count
+
+
+print(f'Ejercicio 1 Ejemplo output :{Solitary([4, 1, 2, 1, 2])}')
+print(f'Ejercicio 2 Ejemplo output :{ZeroCleaner([0, 1, 0, 3, 12] )}')
